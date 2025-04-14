@@ -3,7 +3,11 @@ package main
 import (
 	"context"
 	"dagger/tutorial/internal/dagger"
+	"time"
 )
+
+// This is a hack to ensure that the time package is imported.
+var _ = time.UTC
 
 type Tutorial struct {
 	// Project source directory
