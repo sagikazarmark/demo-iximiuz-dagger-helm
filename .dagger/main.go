@@ -3,11 +3,17 @@ package main
 import (
 	"context"
 	"dagger/tutorial/internal/dagger"
+	"fmt"
+	"strings"
 	"time"
 )
 
-// This is a hack to ensure that the time package is imported.
-var _ = time.UTC
+// This is a hack to ensure that a few necessary packages are imported.
+var (
+	_ = time.UTC
+	_ = fmt.Sprintf
+	_ = strings.Join
+)
 
 type Tutorial struct {
 	// Project source directory
